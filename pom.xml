@@ -13,6 +13,14 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>lychao-base</name>
     <description>Demo project for Spring Boot</description>
+
+    <modules>
+        <module>base-common</module>
+        <module>base-datasource</module>
+        <module>base-gateway</module>
+        <module>base-generator</module>
+    </modules>
+
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>2020.0.4</spring-cloud.version>
