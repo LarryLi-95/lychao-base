@@ -8,8 +8,8 @@
 
 package com.lychao.basegenerator.utils;
 
-import io.ay.entity.ColumnEntity;
-import io.ay.entity.TableEntity;
+import com.lychao.basegenerator.entity.ColumnEntity;
+import com.lychao.basegenerator.entity.TableEntity;
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
