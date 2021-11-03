@@ -36,10 +36,6 @@ public class MD5Util {
         return buffer.toString();
     }
 
-    public static void main(String[] args) {
-        System.out.println(encrypt("123456"));
-    }
-
     public static String md5(String... values) {
         return md5(Arrays.asList(values));
     }
