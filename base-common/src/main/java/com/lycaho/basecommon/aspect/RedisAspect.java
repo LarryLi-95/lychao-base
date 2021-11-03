@@ -1,14 +1,13 @@
 /**
  * Copyright (c) 2016-2019 人人开源 All rights reserved.
- *
+ * <p>
  * https://www.renren.io
- *
+ * <p>
  * 版权所有，侵权必究！
  */
 
 package com.lycaho.basecommon.aspect;
 
-import com.lychao.basegenerator.utils.RRException;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -20,7 +19,7 @@ import org.springframework.stereotype.Component;
 /**
  * Redis切面处理类
  *
- * @author Mark sunlightcs@gmail.com
+ * @author lychao
  */
 @Aspect
 @Component
@@ -35,12 +34,12 @@ public class RedisAspect {
     @Around("execution(* com.lycaho.basecommon.utils.RedisUtils.*(..))")
     public Object around(ProceedingJoinPoint point) throws Throwable {
         Object result = null;
-        if(open){
-            try{
+        if (open) {
+            try {
                 result = point.proceed();
-            }catch (Exception e){
+            } catch (Exception e) {
                 logger.error("redis error", e);
-                throw new RRException("Redis服务异常");
+                throw new Exception("Redis服务异常");
             }
         }
         return result;

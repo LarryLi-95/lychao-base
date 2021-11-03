@@ -21,9 +21,4 @@ public class GenerateUtils {
         return randomNum.toString();
     }
 
-    public static void main(String[] args) {
-        for (int i = 0; i < 100; i++) {
-            System.out.println(io.ay.common.utils.GenerateUtils.generateRandomNum(1));
-        }
-    }
 }

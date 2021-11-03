@@ -8,13 +8,14 @@
 
 package com.lycaho.basecommon.xss;
 
+import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
  * XSS过滤
  *
- * @author Mark sunlightcs@gmail.com
+ * @author lychao
  */
 public class XssFilter implements Filter {
 

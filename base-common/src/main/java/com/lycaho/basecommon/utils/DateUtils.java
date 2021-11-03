@@ -14,15 +14,15 @@ import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
  * 日期处理
  *
- * @author Mark sunlightcs@gmail.com
+ * @author lychao
  */
 public class DateUtils {
     private DateUtils() {
@@ -210,8 +210,8 @@ public class DateUtils {
 
 
     /**
-     * 获取当前13位时间戳
      *
+     * @description:获取当前13位时间戳
      * @return
      */
     public static Long getTimeStamp() {
@@ -224,8 +224,8 @@ public class DateUtils {
     }
 
     /**
-     * 获取指定13位时间戳
-     *
+     * @description:获取指定13位时间戳
+     * @param dateTme
      * @return
      */
     public static Long getTimeStamp(String dateTme) {
@@ -239,8 +239,8 @@ public class DateUtils {
 
 
     /**
-     * 获取指定13位时间戳
-     *
+     * @description:获取指定13位时间戳
+     * @param dateTme
      * @return
      */
     public static Long getTimeStamp(Date dateTme) {
@@ -250,6 +250,24 @@ public class DateUtils {
             e.printStackTrace();
             return null;
         }
+    }
+
+
+    /**
+     * @description: 判断日期字符串是否为周末 是周末返回true
+     * @param date
+     * @return boolean
+     */
+    public static boolean isWeekend(Date date) {
+        boolean isWeekend = false;
+        try {
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(date);
+            isWeekend = cal.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY || cal.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return isWeekend;
     }
 
 }
