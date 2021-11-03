@@ -1,5 +1,5 @@
 /**
- * @author：Wu.Zheng
+ * @author：lychao
  * @createTime：2013年11月16日
  */
 package com.lycaho.basecommon.utils;
@@ -14,7 +14,7 @@ import java.util.*;
 /**
  * 签名操作工具集合。
  * 
- * @author Wu.Zheng
+ * @author lychao
  */
 public class SignUtils {
 
@@ -62,8 +62,8 @@ public class SignUtils {
 	 * @param keys 键值列表
 	 * @return 指定键对应的所有非null值拼接成的字符串。
 	 * 
-	 * @author：Wu.Zheng
-	 * @createTime：2013年11月16日
+	 * @author lychao
+	 * @createTime 2013年11月16日
 	 */
 	public static String jointAllValue(Map<Object, Object> map, Object... keys) {
 		StringBuilder text = new StringBuilder();
@@ -85,8 +85,8 @@ public class SignUtils {
 	 * @param text StringBuilder对象
 	 * @param obj 要拼接的对象
 	 * 
-	 * @author：Wu.Zheng
-	 * @createTime：2013年11月16日
+	 * @author lychao
+	 * @createTime 2013年11月16日
 	 */
 	public static void appendIfNotNull(StringBuilder text, Object obj) {
 		if (obj != null) {
