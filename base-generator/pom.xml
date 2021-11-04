@@ -28,6 +28,7 @@
         <velocity.version>1.7</velocity.version>
         <mssql.version>4.0</mssql.version>
         <oracle.version>11.2.0.3</oracle.version>
+        <smart.doc.version>2.2.8</smart.doc.version>
     </properties>
 
     <dependencies>
@@ -122,6 +123,18 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>com.github.shalousun</groupId>
+                <artifactId>smart-doc-maven-plugin</artifactId>
+                <version>${smart.doc.version}</version>
+                <configuration>
+                    <!--指定smart-doc使用的配置文件路径-->
+                    <configFile>./src/main/resources/smart-doc.json</configFile>
+                    <!--指定项目名称-->
+                    <projectName>lychao-base-doc</projectName>
+                </configuration>
             </plugin>
         </plugins>
     </build>
